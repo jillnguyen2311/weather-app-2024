@@ -33,13 +33,12 @@ const Home: React.FC = () => {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    const options = { month: 'short', day: 'numeric', year: 'numeric' };
     return date.toLocaleDateString('en-CA') + ' ' + date.toLocaleTimeString('en-CA');
   };
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center">
-      <header className='mt-5 mb-10 bg-blue-100 p-20'>
+      <header className='mt-5 mb-10 p-20'>
         <h1 className="text-5xl font-bold">Weather Forecast Web App</h1>
       </header>
       <input
@@ -96,7 +95,7 @@ const Home: React.FC = () => {
           ))}
         </div>
       )}
-       <footer className="py-7 px-8 text-center text-lg">
+       <footer className="py-10 px-5 text-center text-lg">
         <p>&copy; 2024 Weather App. Created by Jill Nguyen</p>
       </footer>
     </div>
